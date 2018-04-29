@@ -1,0 +1,73 @@
+/*
+  =================================
+      LAYOUT
+  =================================
+*/
+.curriculum{
+  padding: 5rem 1rem;
+  &__header{
+    @extend %container;
+    text-align: center;
+  }
+  &__content{
+    @include from(m){
+      display: flex;
+      flex-direction: column;
+    }
+  }
+  &__item{
+    &:nth-child(odd){
+      @include from(m){
+        margin-left: 50%;
+        padding-left: 1rem;
+      }
+      @include from(l){
+        padding-left: 2rem;
+      }
+    }
+    &:nth-child(even){
+      @include from(m){
+        margin-right: 50%;
+        margin-left: auto;
+        padding-right: 1rem;
+      }
+      @include from(l){
+        padding-right: 2rem;
+      }
+    }
+  }
+}
+
+/*
+  =================================
+      DECORATION
+  =================================
+*/
+.curriculum{
+  &__content{
+    position: relative;
+    &::before{
+      @extend %beforeAfter;
+      width: 2px;
+      transform: translateX(-50%);
+      left: 50%;
+      background: color(accentColor-2);
+    }
+    &::after{
+      $widthDecoration: 0.7rem;
+      @extend %beforeAfter;
+      width: $widthDecoration;
+      background: color(secondary);
+      height: 3rem;
+      border-radius: $widthDecoration/2;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+    @include to(m){
+      &::before,
+      &::after{
+        display: none;
+      }
+    }
+  }
+}

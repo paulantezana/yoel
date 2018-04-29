@@ -1,0 +1,26 @@
+$cssCore: false;
+$max-width: 1200px;
+
+@import "config/config";
+@import "~sedna/bin/sedna";
+
+
+@include sn-container-item();
+@include coreGrid();
+@include flexCssHelpers();
+.sn-video{
+  @include sn-video();
+}
+
+@import "header/all";
+@import "layout/all";
+@import "block/all";
+@import "curriculum/all";
+@import "regions/all";
+
+
+@include sn-timeline();
+@include sn-tag();
+@include sn-tag-color();
+
+

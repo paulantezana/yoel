@@ -1,0 +1,32 @@
+// // GENERAL STYLES AND LAYOUT
+// .personals{
+//   @include grid('.personal',(2,3),1rem);
+//   max-width: 35rem;
+//   margin-left: auto;
+//   margin-right: auto;
+// }
+// .personal{
+//   @extend %list;
+//   text-align: center;
+//   p{margin: 0}
+//   border: 1px solid color(medium-gray);
+//   &:nth-child(1){background: color(success)}
+//   &:nth-child(2){background: color(assent-2)}
+//   &:nth-child(3){background: color(info)}
+//   &:hover{
+
+//   }
+// }
+
+
+// .personal__item:first-child{
+//   padding: 2rem;
+//   color: white;
+//   &:before{ font-size: 2rem; }
+// }
+
+
+// .personal__item:last-child{
+//   padding: 1rem;
+//   background: white;
+// }

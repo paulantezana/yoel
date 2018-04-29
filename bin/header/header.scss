@@ -1,0 +1,13 @@
+.header-container{
+  background: $white;
+  border-bottom: 1px solid shade(grey-lighter);
+  height: $header-height;
+  position: relative;
+}
+
+.header{
+  height: 100%;
+  img{
+    height: $header-height / 1.7;
+  }
+}

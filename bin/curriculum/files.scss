@@ -1,0 +1,27 @@
+// .files{
+//   @extend %container;
+//   display: flex;
+//   justify-content: center;
+//   margin-top: 2rem;
+//   margin-bottom: 3rem;
+//   &__print,
+//   &__dowloand{
+//     margin: 0.5rem;
+//     @include from(m){
+//       margin: 1rem;
+//     }
+//     @extend %btn;
+//     border-radius: 1em;
+//     &:before{
+//       margin-right: 1rem;
+//     }
+//   }
+//   &__print{
+//     @include btnColor(color(color-2));
+//     @include btnHoverActive(color(color-2));
+//   }
+//   &__dowloand{
+//     @include btnColor(color(alert));
+//     @include btnHoverActive(color(alert));
+//   }
+// }

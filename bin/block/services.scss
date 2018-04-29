@@ -1,0 +1,64 @@
+// DECORATION IMG
+.service{
+    border: 1px solid darken(shade(grey-lighter),3);
+    &__header{
+      display: block;
+      background: lighten(shade(grey-lighter),1);
+      padding: 3rem 1rem;
+    }
+    &__content{
+      background: white;
+      padding: 1rem;
+      text-align: center;
+    }
+  }
+  // service decoration
+  .service{
+    &__title{
+      margin: 0;
+      font-weight: normal;
+      color: body(color);
+    }
+    &__btn{
+      color: shade(grey-lighter);
+    }
+    &__content{
+      [class*='icon-']{
+      }
+    }
+    &__icon{
+      font-size: 1.5rem;
+      margin: 0.4rem;
+      //&:before{}
+      color: darken(shade(grey-lighter),15);
+    }
+  }
+
+  // SERVICE Content
+  .service{
+    transition: all .4s;
+    &:hover{
+      transform: translateY(-10px);
+    }
+  }
+
+
+
+  // Animacion Con Scroll
+  .service{
+    &:nth-child(2n){
+      animation: scrollLoad1 2s;
+    }
+    &:nth-child(2n+1){
+      animation: scrollLoad2 2s;
+      //outline: 1px solid blue;
+    }
+  }
+  @keyframes scrollLoad1 {
+    0%{  transform: translateX(-3000px);  }
+    100%{  transform: translate(0);  }
+  }
+  @keyframes scrollLoad2 {
+    0%{  transform: translateX(3000px);  }
+    100%{  transform: translate(0);  }
+  }

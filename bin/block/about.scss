@@ -1,0 +1,40 @@
+.beneficio{
+    &__item{
+      &:first-child::before{  font-size: 2.3rem;  }
+    }
+  }
+  @mixin beneficio-white(){
+    .beneficio{
+      border: 1px solid shade(grey);
+      background-color: white;
+    }
+  }
+  @mixin beneficio-transparent(){
+    .beneficio{
+      border: 1px solid shade(grey-lighter);
+    }
+  }
+
+  @mixin beneficio-color(){
+    .beneficios-container{
+      color: white;
+      position: relative;
+      background: url("/bundles/assets/images/city.jpeg") no-repeat center/cover;
+      &:before{
+        @extend %beforeAfter;
+        background: rgba(color(color),.8);
+      }
+      .site{
+        &-header{
+          position: relative;
+          z-index: 10;
+        }
+        &-title{  color: white;  }
+        &-subTitle{  color: shade(grey);  }
+      }
+    }
+    .beneficio{
+      background: rgba(black,.2);
+      h3{color: color(inverse)}
+    }
+  }

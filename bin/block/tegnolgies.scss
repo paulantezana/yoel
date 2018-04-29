@@ -1,0 +1,53 @@
+.tecnologies-container{
+    background: white;
+    .tecnologie-container{
+      @extend %container;
+    }
+  }
+  .tecnologie-container{
+    @include grid('.tecnologie',(2,4,6),1rem);
+    margin-right: auto;
+    margin-left: auto;
+  }
+  .tecnologie{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    //padding-top: 2rem;
+    padding-bottom: 2rem;
+    &__img{
+      width: 5rem;
+      height: 5rem;
+    }
+    &__btn{
+    //   @extend %btn;
+      line-height: 2em;
+      margin-top: 0.5rem;
+      border-radius: 1em;
+      font-size: 0.8rem;
+    }
+    // &:nth-child(1){.tecnologie__btn{
+    //   @include btnColor(#29A9E0);
+    //   @include btnHoverActive(#29A9E0);
+    // }}
+    // &:nth-child(2){.tecnologie__btn{
+    //   @include btnColor(#FF7373);
+    //   @include btnHoverActive(#FF7373);
+    // }}
+    // &:nth-child(3){.tecnologie__btn{
+    //   @include btnColor(#21759A);
+    //   @include btnHoverActive(#21759A);
+    // }}
+    // &:nth-child(4){.tecnologie__btn {
+    //   @include btnColor(#41B783);
+    //   @include btnHoverActive(#41B783);
+    // }}
+    // &:nth-child(5){.tecnologie__btn{
+    //   @include btnColor(#336791);
+    //   @include btnHoverActive(#336791);
+    // }}
+    // &:nth-child(6){.tecnologie__btn{
+    //   @include btnColor(#353436);
+    //   @include btnHoverActive(#353436);
+    // }}
+  }

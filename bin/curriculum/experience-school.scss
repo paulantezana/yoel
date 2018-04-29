@@ -1,0 +1,7 @@
+.experience-school{
+  @include from(800px){
+    display: flex;
+    justify-content: space-between;
+    .timeline:nth-last-child(1){  margin-right: 1rem;  }
+  }
+}

@@ -1,0 +1,112 @@
+/**
+  ==============================================
+          LAYOUT
+  ==============================================
+ */
+.curriculumCard{
+  max-width: 28rem;
+  @include from(m){
+    min-width: 17rem;
+  }
+  @include from(l){
+    min-width: 28rem;
+    //display: flex;
+  }
+  &__item{
+    &:first-child{
+      //flex: 0 0 7rem;
+      //display: flex;
+      //flex-direction: column;
+      //justify-content: center;
+      //align-items: center;
+      //text-align: center;
+    }
+    &:last-child{
+      flex: auto;
+      ul{
+        @extend %list;
+      }
+    }
+  }
+  &__title{
+    //color: color(white);
+    font-weight: normal;
+  }
+}
+/**
+  ==============================================
+          DECORATION
+  ==============================================
+ */
+.curriculumCard{
+  &__item{
+    background: color(white);
+    &__img{
+      max-width: 6rem;
+      max-height: 6rem;
+    }
+    &:last-child{
+      ul{
+
+        li{
+          padding: 0.9rem;
+          border-bottom: 1px solid color(light-gray);
+          &:last-child{
+           border: none;
+          }
+          &::before{
+            margin-right: 0.9rem;
+          }
+        }
+      }
+    }
+  }
+}
+/**
+  ==============================================
+          DECORATION FOR ITEM
+  ==============================================
+ */
+// GENERAL
+.curriculum__item{
+  .curriculumCard{
+    border: 1px solid darken(color(light-gray),1);
+    [class*="icon-"]::before{
+      font-size: 1.5rem;
+    }
+    &__item:first-child{
+      [class*="icon"]::before{
+        font-size: 4rem;
+      }
+    }
+    &__title{
+      margin: 0;
+      padding: 1rem 0;
+      text-align: center;
+    }
+  }
+}
+// SPECIFIC
+.curriculum__item{
+  &:nth-child(3n + 1){
+    .curriculumCard{
+      [class*="icon-"]::before{
+        color: color(accentColor-1);
+      }
+    }
+  }
+  &:nth-child(3n + 2){
+    .curriculumCard{
+      [class*="icon-"]::before{
+        color: color(accentColor-2);
+      }
+    }
+  }
+  &:nth-child(3n + 3){
+    .curriculumCard{
+      [class*="icon-"]::before{
+        color: color(accentColor-3);
+      }
+    }
+  }
+}

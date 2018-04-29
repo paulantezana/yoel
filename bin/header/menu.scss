@@ -1,0 +1,13 @@
+.main-menu{
+  a{
+    color: $app-font-color;
+    &:hover{
+      color: color(color);
+    }
+  }
+  li > a {
+    @include from(l){
+
+    }
+  }
+}

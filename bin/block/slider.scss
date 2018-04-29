@@ -1,0 +1,214 @@
+//object-fit: cover;
+$slider-bp: 700px;
+.slider-container{
+  position: relative;
+  overflow: hidden;
+  transition: all .4s;
+  background: color(color);
+}
+
+.slider{
+  height: 550px;
+  position: relative;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  &__bg{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    video,
+    iframe{
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+  &__item{
+    @include from($slider-bp){
+      width: 50%;
+    }
+    &:last-child{
+      //display: flex;
+      //height: 100%;
+      //justify-content: center;
+      //align-items: flex-end;
+      //picture{width: 14rem}
+      //@include to(900px){  width: 0;  } // Ocultando el dispositivo movil
+    }
+    &:first-child{
+      @include to($slider-bp){  width: 100%;  } // Justificando el espacio que dejo el movil al ocultarse
+    }
+  }
+}
+
+
+
+.slider-container{
+  //background: url("/bundles/assets/images/slider.jpeg") no-repeat center/cover fixed; // Fondo
+  &:before{
+    // Relleno degradado
+    background: linear-gradient(145deg, rgba(color(color-2),.7),rgba(#125DBB,.7));
+    z-index: 7;
+  }
+}
+
+
+// Estilos para el contenido del slider
+.slider{
+  color: white;
+  @include to(900px){
+    text-align: center;
+  }
+  &__title{
+    color: white;
+    font-size: 2.6rem;
+    font-weight: 300;
+    line-height: 1em;
+    margin: 1.3rem 0;
+  }
+  &__subTitle{
+    font-weight: 700;
+    font-size: 2.1rem;
+    line-height: 1em;
+    margin: 1.3rem 0;
+    span{
+      border-right: 2px solid color(inverse);
+      padding: 0 0.2rem 0 1rem;
+      transition: all 0.2s;
+      animation: subtitle 0.8s infinite;
+      color: color(inverse);
+      @include to(m){
+        display: block;
+        height: 2.1rem;
+      }
+    }
+  }
+  &__callToAction{
+    a{
+      display: inline-block;
+      line-height: 2.2rem;
+      padding: 0 1.2rem;
+      color: white;
+      border-radius: 3px;
+      cursor: pointer;
+    }
+    a:first-child{margin-right: 1rem; background: color(inverse)}
+    a:last-child{background: rgba(white,.2)}
+  }
+}
+@keyframes subtitle {
+  0%, 50%{ border-color: transparent; }
+  50%, 100% { border-color:  color(inverse); }
+}
+
+// Estilos para las particulas en el slider
+.particles-js-canvas-el{
+  position: absolute;
+  z-index: 8;
+  top: 0;
+  height: 100%;
+}
+
+
+
+// Animacion Sobre los elementos de Slider ===============
+.slider__item{
+  &:last-child{
+    animation: imageShow 2s;
+  }
+}
+@keyframes imageShow {
+  0%{
+    transform: translate(2000px);
+  }
+  100%{
+    transform: translate(0);
+  }
+}
+
+
+
+
+
+
+
+
+// ACTION HOME  ===============================
+
+// LAYOUT
+.actionHome{
+  .sn-container{
+    @include from(m){
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+  }
+  @include to(m){
+    padding: 1rem 0 2rem;
+    text-align: center;
+  }
+  &__list{
+    @extend %list;
+    display: flex;
+    justify-content: space-between;
+      height: 100%;
+    &__phone,
+    &__email,
+    &__social{
+      border-right: 1px solid color(color-3);
+      display: flex;
+      align-items: center;
+      margin-left: 1rem;
+    }
+    &__phone{@include to(m){
+      display: none;
+      background: blue;
+    }}
+    &__email{@include to(l){
+      display: none;
+    }}
+    &__social{@include to(xl){
+      display: none;
+    }}
+    a{ margin: 0 1rem;}
+  }
+  .icon-right{@include to(m){
+    display: none;
+  }}
+  &__btn{@include to(m){
+    margin-top: 0.5rem;
+    display: inline-block;
+  }}
+}
+
+.actionHome{
+  background: darken(color(color),5);
+  color: white;
+  &__title{
+    color: white;
+    font-size: 1em;
+    font-weight: normal;
+    margin: .5rem 0;
+  }
+  a{ color: white;  }
+  i{
+    color: color(inverse);
+  }
+  .icon-right{
+    font-size: 1.4rem;
+  }
+  &__btn{
+    border: 1px solid white;
+    border-radius: 5px;
+    padding: 0.2rem 0.7rem;
+    &:before{
+      margin-right: 0.2rem;
+    }
+    &:hover{
+
+    }
+  }
+}
+

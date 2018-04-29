@@ -1,0 +1,11 @@
+.objective{
+  @include from(m){
+    display: flex;
+    &__item{
+      &:first-child{
+        flex: 1 0 30rem;
+        margin-right: 1rem;
+      }
+    }
+  }
+}
