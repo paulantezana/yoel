@@ -103,7 +103,13 @@ $app-background: #FAFAFA;
 
 $header-height: 3.5rem;
 
-
+h1,
+h2,
+h3,
+h4{
+    color: $app-font-color-title;
+    line-height: 1.1em;
+}
 
 
 

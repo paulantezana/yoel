@@ -4,8 +4,13 @@
   flex-direction: column;
 }
 
-.main{
-  padding-bottom: 3rem;
+.site-margin{
+  margin-bottom: 1rem;
+  margin-top: 1rem;
+  @include from(l){
+    margin-bottom: 3rem;
+    margin-top: 3rem;
+  }
 }
 
 .footer-container{

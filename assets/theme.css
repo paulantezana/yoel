@@ -1,4 +1,11 @@
 @charset "UTF-8";
+h1,
+h2,
+h3,
+h4 {
+  color: #2C3847;
+  line-height: 1.1em; }
+
 .main-menu, .main-menu li ul, .actionHome__list, .curriculumCard__item:last-child ul, .socialMedia {
   list-style: none;
   padding: 0;
@@ -5316,16 +5323,21 @@ a.tag:hover {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-top: 3rem;
-  margin-bottom: 3rem; }
+  margin-top: 1rem;
+  margin-bottom: 1rem; }
 
 .layout-container {
   height: 100%;
   display: flex;
   flex-direction: column; }
 
-.main {
-  padding-bottom: 3rem; }
+.site-margin {
+  margin-bottom: 1rem;
+  margin-top: 1rem; }
+  @media screen and (min-width: 1024px) {
+    .site-margin {
+      margin-bottom: 3rem;
+      margin-top: 3rem; } }
 
 .footer-container {
   margin-top: auto; }
@@ -5596,6 +5608,120 @@ a.tag:hover {
     transform: translateX(3000px); }
   100% {
     transform: translate(0); } }
+
+.post-container {
+  display: grid;
+  grid-gap: 2rem; }
+  @media screen and (min-width: 640px) {
+    .post-container {
+      grid-template-columns: repeat(3, 1fr); } }
+
+.post__poster {
+  position: relative;
+  display: block;
+  overflow: hidden;
+  transition: all .4s;
+  border-radius: 15px;
+  color: white;
+  text-align: center; }
+  .post__poster__date {
+    position: absolute;
+    top: .5rem;
+    left: .5rem;
+    border-radius: 1em;
+    color: white;
+    padding: .2rem 1rem;
+    font-size: 0.8rem;
+    background: rgba(0, 0, 0, 0.3);
+    z-index: 10; }
+  .post__poster::before {
+    content: "";
+    position: absolute;
+    bottom: -10%;
+    left: -10%;
+    background: rgba(15, 141, 251, 0.8);
+    transition: all .4s;
+    z-index: 3;
+    border-radius: 100%;
+    transform-origin: bottom left;
+    width: 10%;
+    height: 10%; }
+  .post__poster__thumbnail img {
+    transition: all .4s; }
+  .post__poster__thumbnail:hover img {
+    box-shadow: 2px 0 30px 2px rgba(0, 0, 0, 0.3); }
+
+.post__content {
+  padding: 0 1rem; }
+
+.post__title {
+  font-size: 1rem;
+  margin-bottom: .3em; }
+  .post__title a {
+    color: #2C3847; }
+
+.post:hover .post__poster {
+  color: white;
+  box-shadow: 0 0 40px 2px rgba(15, 141, 251, 0.4); }
+  .post:hover .post__poster::before {
+    left: -36%;
+    bottom: -36%;
+    width: 170%;
+    height: 170%; }
+
+.post:hover .post__title a {
+  color: #0F8DFB; }
+
+.post__author {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: .8rem; }
+  .post__author__profile img {
+    border-radius: 100%;
+    margin-right: .5rem; }
+
+.post-single__thumbnail {
+  height: 30rem;
+  overflow: hidden;
+  position: relative; }
+  .post-single__thumbnail:before {
+    position: absolute;
+    content: "";
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background: rgba(15, 141, 251, 0.8); }
+  .post-single__thumbnail img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover; }
+
+.post-single__title {
+  position: absolute;
+  z-index: 5;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  margin: 0; }
+
+.post .nav-links {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 2rem 0;
+  padding: 1rem 0;
+  border-top: 1px solid #dbdbdb;
+  border-bottom: 1px solid #dbdbdb; }
+  .post .nav-links a {
+    display: flex;
+    flex-direction: column; }
+  .post .nav-links .meta-nav {
+    color: #66778B; }
+  .post .nav-links .nav-next {
+    text-align: right; }
 
 .header-curriculum-container:after, .curriculum__content::before, .curriculum__content::after {
   top: 0;
@@ -5874,6 +6000,12 @@ a.tag:hover {
     background: #3E7CE9; }
   .socialMedia .icon-whatsapp:active, .socialMedia .icon-whatsapp:hover {
     background: #29B200; }
+
+.sidebar-container {
+  background: white;
+  padding: 1rem;
+  border: 1px solid whitesmoke;
+  border-radius: 3px; }
 
 .timeline {
   display: flex;

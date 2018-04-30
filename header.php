@@ -8,6 +8,7 @@
 
         <title><?php bloginfo( 'name' )?></title>
         <link href="https://file.myfontastic.com/gSW82snjpEUNAUmanzgKQj/icons.css" rel="stylesheet">
+        <link rel="shortcut icon" href="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/images/favicon.ico" type="image/x-icon">
         <link rel="stylesheet" href="<?php echo get_stylesheet_uri(); ?>">
         <link rel="stylesheet" href="<?php echo esc_url( get_template_directory_uri() );?>/assets/theme.css">
         <script src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/theme.js"></script>
